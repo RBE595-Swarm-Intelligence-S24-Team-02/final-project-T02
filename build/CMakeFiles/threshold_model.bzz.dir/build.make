@@ -67,8 +67,8 @@ include CMakeFiles/threshold_model.bzz.dir/compiler_depend.make
 include CMakeFiles/threshold_model.bzz.dir/progress.make
 
 CMakeFiles/threshold_model.bzz: ../threshold_model.bzz
-CMakeFiles/threshold_model.bzz: threshold_model.bo
-CMakeFiles/threshold_model.bzz: threshold_model.bdb
+CMakeFiles/threshold_model.bzz: ../threshold_model.bo
+CMakeFiles/threshold_model.bzz: ../threshold_model.bdb
 
 threshold_model.bo: ../threshold_model.bzz
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Compiling Buzz script threshold_model.bzz"

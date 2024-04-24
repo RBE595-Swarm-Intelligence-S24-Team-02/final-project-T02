@@ -1,9 +1,9 @@
-include "include/vec2.bzz"
+include "vec2.bzz"
 
 ROBOT_MAX_VEL = 5
 ROBOT_RADIUS = 10
 TIME_STEP = 0.1
-ROBOT_COUNT  = 10
+ROBOT_COUNT  = 5
 NEIGHBOUR_DIST = 300
 VELOCITY_COUNT = 100
 IS_VO =  False 
@@ -51,8 +51,9 @@ function calc_vel_penalty(robot1_pos,robot2_pos, new_vel, robot2_vel, robot1_vel
 
     # Ignore Glancing collisions  that may not cause a response due to limited precision
     # and lead to infinite looop  of check - Adding threshold to  reduce close collision check 
-    if b > -1e-6 or d <=0:
+    if ((b > -0.000001) or (d <= 0)) {
         return linalg_norm(pref_vel, new_vel)
+    }
     
     # Calculate the square root of the Discriminant
     e = math.sqrt(d)
@@ -64,7 +65,7 @@ function calc_vel_penalty(robot1_pos,robot2_pos, new_vel, robot2_vel, robot1_vel
     # Check conditiosn to determine the actual collision time 
     # If we are overlapping and moving closer, collide now
 
-    if (t1<0<t2 and b <=-1e-6){
+    if ((t1<0) and (t2>0) and (b <= -0..000001)){
         # time_to_col =0 # removed/commented out because this  would cause division by zero
         return 0}
     else {
