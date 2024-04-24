@@ -1,0 +1,58 @@
+# RBE 595 - Final Project
+
+# Performance metrics
+travel_distance = 0.0 + float(id)
+travel_time = 0.0
+success = 0
+
+#
+# Executed once at init time
+#
+function init() {
+  reset()
+}
+
+#
+# Executed for each step
+#
+function step() {
+
+  travel_distance = travel_distance + 1.0
+  travel_time = travel_time + 1.0
+  success = 0
+
+  debug.print("X=", posX[id], " Y=", posY[id])
+
+  # Some debug output just for fun
+  debug_output()
+}
+
+#
+# Executed once upon resetting
+#
+function reset() {
+
+  # Debug output
+  debug_output()
+}
+
+#
+# Executed once upon closing ARGoS
+#
+function destroy() {
+  # Nothing to do
+}
+
+#
+# Helper function
+#
+function debug_output() {
+  # Examples of possible debug output
+  
+  # Debug message written on top of robot
+  # See: https://the.swarming.buzz/wiki/doku.php?id=buzz_argos
+  #debug.print("t=", task, "; th0=", threshold[0], "; th1=", threshold[1])
+  # Debug message written in the log
+  # log("R", id, ": position=", robot_positions_x[0])
+  #log("R", id, ": posX=", posX[id], "; posY=", posY[id])
+}
