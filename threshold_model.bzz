@@ -1,92 +1,125 @@
-# Reinforce parameter
-# Defined in slide 11
-# Chosen as in slide 17
-XSI = 10
-# Forget parameter
-# Defined in slide 11
-# Chosen as in slide 17
-PHI = 1
-# Spontaneous switching
-# Defined in slide 15
-# Chosen as in slide 17
-P = 0.2
-# Number of tasks: if you change this, you must also change the corresponding
-# parameter in the .argos file, line 107!
-TASKS = 2
+include "include/vec2.bzz"
 
-DT = 10
+ROBOT_MAX_VEL = 5
+ROBOT_RADIUS = 10
+TIME_STEP = 0.1
+ROBOT_COUNT  = 10
+NEIGHBOUR_DIST = 300
+VELOCITY_COUNT = 100
+IS_VO =  False 
+OMEGA = 1
 
-#
-# Executed once at init time
-#
+
+function linalg_norm(var1, var2) {
+    lin_norm = math.sqrt((var1.x - var2.x)^2 + (var1.y-var2.y)^2)
+    return lin_norm
+}
+
+
+function is_goal_reached(goal, current_location){
+    lin_norm_val = linalg_norm(goal, current_location)
+    return lin_norm < ROBOT_RADIUS
+}
+
+
+function preferred_velocity(goal, current_location) {
+    if (is_gal_reached(goal, current_location))
+    {direction = math.vec2.sub(goal, current_location)
+    direction_unit_vector = direction/ (math.sqrt(direction.x^2 + direction.y^2))
+    pref_vel = ROBOT_MAX_VEL * direction_unit_vector}
+    else {
+        pref_vel.x =0
+        pref_vel.y =0
+    }
+}
+
+
+function calc_vel_penalty(robot1_pos,robot2_pos, new_vel, robot2_vel, robot1_vel, pref_vel) {
+    new_vel = math.vec2.sub(2*new_vel - robot1_vel)
+    distance = (2*ROBOT_RADIUS) ^ 2
+
+    # Calculate coefficients for a quadratic equation representing the time of collision
+
+    a = (new_vel.x - robot2_vel.x) ^2 + (new_vel.y - robot2_vel.y) ^ 2
+    b = 2* ((robot1_pos.x - robot2_pos.x) * (new_vel.x - robot2_vel.x) + 
+            (robot1.pos.y - robot2_pos.y) * (new_vel.y - robot2_vel.y))
+    
+    c = (robot1_pos.x - robot1_pos.x) ^ 2 + (robot1_pos.y - robot2_pos.y) ^2 - distance 
+    
+    # Discriminant of the quadratic equation
+    d = b^ 2- 4 *a*c
+
+    # Ignore Glancing collisions  that may not cause a response due to limited precision
+    # and lead to infinite looop  of check - Adding threshold to  reduce close collision check 
+    if b > -1e-6 or d <=0:
+        return linalg_norm(pref_vel, new_vel)
+    
+    # Calculate the square root of the Discriminant
+    e = math.sqrt(d)
+
+    # Calculate the potential timems of collision (t1 and t2)
+    t1 = (-b-e)/ (2*a)  # Collision time - +ve and -ve
+    t2 = (-b+e)/ (2*a)  # Exit time - +ve or -ve 
+
+    # Check conditiosn to determine the actual collision time 
+    # If we are overlapping and moving closer, collide now
+
+    if (t1<0<t2 and b <=-1e-6){
+        # time_to_col =0 # removed/commented out because this  would cause division by zero
+        return 0}
+    else {
+        time_to_col = t1
+    }
+    penalty = OMEGA * (1/time_to__col) + linalg_norm(pref_vel - new_vel)
+    return penalty
+} 
+
+function collision_cone(vel, robot1_pos, robot2_pos, robot2_vel) {
+    rx = robot1_pos.x 
+    ry = robot1_pos.y 
+    vrx = vel.x 
+    vry = vel.y 
+
+    obx = robot2_pos.x 
+    oby = robot2_pos.y 
+    vobx = robot2_vel.x 
+    voby = robot2_vel.y 
+
+    R = 2 * ROBOT_RADIUS + 10 
+
+    # if constraint_val =0, no collision, else there will be a collision in the future 
+    constraint_val = -((rx -obx)*(vrx- vobx) + (ry -oby )* (vry-voby)) ^ 2 + 
+        (-R^2 + (rx-obx) ^2 + (ry-oby)^2) * ((vrx-vobx)^2 + (vry-voby) ^2)
+    
+    return constraint_val
+ }
+
+
+
 function init() {
-  reset()
+
+    num_robots = ROBOT_COUNT
+    s1 = swarm.create(num_robots)
+    
 }
 
-#
-# Executed for each step
-#
 function step() {
-  # Perform probabilistic switching explained in the slides
-  # Use the math.rng library
-  # See https://the.swarming.buzz/wiki/doku.php?id=buzz_manual#the_mathrng_library
 
-  # The stimulus is calculated by the ARGoS loop functions
-  # ARGoS "magically" inserts the variable 'stimulus' in the script of each robot
-  # It is defined as a table indexed by the number of the task, for example:
-  # stimulus = {
-  #   .0 = stimulus for task 0 (some float value),
-  #   .1 = stimulus for task 1 (some float value)
-  # }
-  # For details, check the file threshold_model.cpp
-  # Stimuli are initialized at lines 112-116
-  # Stimuli are updated at lines 150-153
-  # The magic that writes the stimuli into the scripts is at 75-96
-  # Feel free to read the code and play with it!
-  
-  # Placeholder code, just to have the robots do something - you'll need to change this!
-  # 'task' is expected to be an integer variable, make sure it is at all times!
-  # See lines 9-70 to check how the loop functions fetch it from the Buzz scripts
-  task = (task + 1) % TASKS
-  # The 'threshold' table is read by the ARGoS loop functions, so make sure not to use
-  # a different variable name
-  # See lines 9-70 to check how the loop functions fetch it from the Buzz scripts
-  threshold[0] = threshold[0] + 1.5
-  threshold[1] = threshold[1] + 2.5
-  # Some debug output just for fun
-  debug_output()
+
 }
 
-#
-# Executed once upon resetting
-#
+
 function reset() {
-  # Pick a default task
-  task = 0 # must be an integer between 0 and TASKS-1!
-  # Pick initial thresholds for the tasks
-  threshold = {}
-  threshold[0] = 500.0 # must be a float between 0.0 and 1000.0!
-  threshold[1] = 500.0 # must be a float between 0.0 and 1000.0!
-  # Debug output
-  debug_output()
+
+
 }
 
-#
-# Executed once upon closing ARGoS
-#
 function destroy() {
-  # Nothing to do
+
+
 }
 
-#
-# Helper function
-#
+
 function debug_output() {
-  # Examples of possible debug output
-  
-  # Debug message written on top of robot
-  # See: https://the.swarming.buzz/wiki/doku.php?id=buzz_argos
-  debug.print("t=", task, "; th0=", threshold[0], "; th1=", threshold[1])
-  # Debug message written in the log
-  log("R", id, ": t=", task, "; th0=", threshold[0], "; th1=", threshold[1])
+
 }

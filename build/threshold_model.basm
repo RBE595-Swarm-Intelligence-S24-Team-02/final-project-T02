@@ -1,0 +1,180 @@
+!21
+'XSI
+'PHI
+'P
+'TASKS
+'DT
+'init
+'reset
+'step
+'task
+'threshold
+'debug_output
+'destroy
+'debug
+'print
+'t=
+'; th0=
+'; th1=
+'log
+'R
+'id
+': t=
+
+	pushs 5
+	pushcn @__label_1
+	gstore
+	pushs 7
+	pushcn @__label_2
+	gstore
+	pushs 6
+	pushcn @__label_3
+	gstore
+	pushs 11
+	pushcn @__label_4
+	gstore
+	pushs 10
+	pushcn @__label_5
+	gstore
+	nop
+
+@__label_0
+	pushs 0	|4,4,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 10	|4,6,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|8,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 1	|8,4,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|8,6,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|12,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 2	|12,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushf 0.2	|12,4,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|15,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 3	|15,6,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 2	|15,8,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|17,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 4	|17,3,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 10	|17,5,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|22,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+
+@__exitpoint	|0,1,(null)
+	done	|0,1,(null)
+
+@__label_1
+	pushnil	|23,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 6	|23,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|23,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|24,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	callc	|24,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pop	|24,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	ret0	|29,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+
+@__label_2
+	pushs 8	|50,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 8	|50,15,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|50,15,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|50,17,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	add	|50,18,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 3	|54,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|54,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	mod	|54,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|54,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|54,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|54,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|54,12,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|54,26,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|54,26,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|54,27,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|54,30,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushf 1.5	|54,32,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	add	|55,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tput	|55,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|55,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|55,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|55,12,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|55,26,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|55,26,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|55,27,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|55,30,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushf 2.5	|55,32,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	add	|57,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tput	|57,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushnil	|57,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 10	|57,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|57,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|58,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	callc	|58,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pop	|58,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	ret0	|63,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+
+@__label_3
+	pushs 8	|65,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|65,9,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|67,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|67,12,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pusht	|67,15,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gstore	|68,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|68,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|68,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|68,12,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushf 500.0	|68,17,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tput	|69,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|69,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|69,11,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|69,12,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushf 500.0	|69,17,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tput	|71,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushnil	|71,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 10	|71,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|71,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|72,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	callc	|72,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pop	|72,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	ret0	|77,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+
+@__label_4
+	ret0	|84,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+
+@__label_5
+	pushs 12	|89,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|89,7,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	dup	|89,13,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 13	|89,13,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|89,13,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 14	|89,14,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 8	|89,24,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|89,24,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 15	|89,26,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|89,45,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|89,45,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|89,46,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|89,48,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 16	|89,50,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|89,69,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|89,69,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|89,70,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|89,72,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 6	|91,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	callc	|91,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pop	|91,2,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushnil	|91,5,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 17	|91,5,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|91,5,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 18	|91,6,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 19	|91,13,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|91,13,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 20	|91,15,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 8	|91,27,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|91,27,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 15	|91,29,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|91,48,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|91,48,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 0	|91,49,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|91,51,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 16	|91,53,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushs 9	|91,72,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	gload	|91,72,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 1	|91,73,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	tget	|91,75,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pushi 8	|92,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	callc	|92,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	pop	|92,0,/mnt/c/Users/einst/Music/WPI/swarm_intelligence/Final_Proj/final-project-T02/threshold_model.bzz
+	ret0	|0,1,(null)
